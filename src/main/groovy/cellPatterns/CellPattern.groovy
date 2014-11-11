@@ -5,10 +5,18 @@ package cellPatterns
  */
 class CellPattern {
 
+  def calculateAutomata(){
+    def matriz = getInfoFromFile()
+    matriz
+  }
+
+
   def getInfoFromFile(){
+    def matriz = []
     def file = new File("/tmp/matriz.txt")
       file.eachLine{it->
-        println it
+        matriz.add it.toString().toCharArray()
       }
+    matriz
   }
 }

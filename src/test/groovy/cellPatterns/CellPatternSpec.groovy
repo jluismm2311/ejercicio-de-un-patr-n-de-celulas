@@ -11,11 +11,17 @@ class CellPatternSpec extends Specification {
       cellPattern = new CellPattern();
     }
 
+    def "calculate automata"(){
+        when:
+        def resp = cellPattern.calculateAutomata()
+        then:
+        resp.size() == 10
+    }
 
     def "get values in file"() {
         when:
-        cellPattern.getInfoFromFile()
+        def resp = cellPattern.getInfoFromFile()
         then:
-        false
+        resp.size == 10
     }
 }
