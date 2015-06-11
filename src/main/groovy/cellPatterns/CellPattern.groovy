@@ -8,6 +8,7 @@ class CellPattern {
   def calculateAutomata(){
     def matrix = getInfoFromFile()
     def matrixSize = matrix.size(), countTimes = 0
+	println "message"
     setIntoFileMatrix(iterateAutomata(matrix, 10, countTimes))
 
   }
